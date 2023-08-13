@@ -1,0 +1,64 @@
+
+
+@import "viettai-dashboard/custom/functions";
+@import "viettai-dashboard/custom/variables";
+@import "viettai-dashboard/custom/mixins";
+
+// bootstrap (4.6.0) components
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/custom-forms";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/jumbotron";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// viettai utilities and components
+
+@import "viettai-dashboard/custom/reboot";
+@import "viettai-dashboard/custom/utilities";
+@import "viettai-dashboard/custom/components";
+
+// Vendor (Plugins)
+
+@import "viettai-dashboard/custom/vendors";
+
+// Docs components
+
+@import "viettai-dashboard/docs/variables";
+@import "viettai-dashboard/docs/nav";
+@import "viettai-dashboard/docs/clipboard-js";
+@import "viettai-dashboard/docs/component-examples";
+@import "viettai-dashboard/docs/prism";
+@import "viettai-dashboard/docs/content";
+@import "viettai-dashboard/docs/sidebar";
+@import "viettai-dashboard/docs/footer";
+
+// React Differences
+@import "react/react-differences";
