@@ -23,11 +23,6 @@ import { PropTypes } from "prop-types";
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardTitle,
   Collapse,
   DropdownMenu,
   DropdownItem,
@@ -45,8 +40,6 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Progress,
-  Table,
   Container,
   Row,
   Col,
@@ -55,7 +48,7 @@ import {
 var ps;
 
 const Sidebar = (props) => {
-  const [collapseOpen, setCollapseOpen] = useState();
+  const [collapseOpen, setCollapseOpen] = useState(false);
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
     return props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
@@ -103,18 +96,13 @@ const Sidebar = (props) => {
   return (
     <Navbar
       className="navbar-vertical fixed-left navbar-light bg-white"
+      data-isOpen="false"
       expand="md"
       id="sidenav-main"
     >
       <Container fluid>
         {/* Toggler */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleCollapse}
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+
         {/* Brand */}
         {logo ? (
           <NavbarBrand className="pt-0" {...navbarBrandProps}>
@@ -182,7 +170,7 @@ const Sidebar = (props) => {
           </UncontrolledDropdown>
         </Nav>
         {/* Collapse */}
-        <Collapse navbar isOpen={collapseOpen}>
+        <Collapse navbar data-isOpen={collapseOpen}>
           {/* Collapse header */}
           <div className="navbar-collapse-header d-md-none">
             <Row>
@@ -206,6 +194,7 @@ const Sidebar = (props) => {
                   onClick={toggleCollapse}
                 >
                   <span />
+
                   <span />
                 </button>
               </Col>
@@ -230,38 +219,7 @@ const Sidebar = (props) => {
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
-          <hr className="my-3" />
-          {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>
-          {/* Navigation */}
-          <Nav className="mb-md-3" navbar>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/overview?ref=adr-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Getting started
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/colors?ref=adr-admin-sidebar">
-                <i className="ni ni-palette" />
-                Foundation
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/alerts?ref=adr-admin-sidebar">
-                <i className="ni ni-ui-04" />
-                Components
-              </NavLink>
-            </NavItem>
-          </Nav>
-          <Nav className="mb-md-3" navbar>
-            <NavItem className="active-pro active">
-              <NavLink href="https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=adr-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Upgrade to PRO
-              </NavLink>
-            </NavItem>
-          </Nav>
+          {/* <hr className="my-3" /> */}
         </Collapse>
       </Container>
     </Navbar>
