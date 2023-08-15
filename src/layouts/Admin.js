@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useLocation, Route, Routes, Navigate } from "react-router-dom";
 // reactstrap components
@@ -7,13 +6,15 @@ import { Container } from "reactstrap";
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-
+import { motion } from "framer-motion";
 import routes from "routes.js";
+import { useSelector } from "react-redux";
+import CreateProduct from "components/Modal/CreateProduct";
 
 const Admin = (props) => {
   const mainContent = React.useRef(null);
   const location = useLocation();
-
+  const { isSideBarOpen } = useSelector((store) => store.sideBar);
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -62,6 +63,7 @@ const Admin = (props) => {
         />
         <Routes>
           {getRoutes(routes)}
+         
           <Route path="*" element={<Navigate to="/admin/index" replace />} />
         </Routes>
         <Container fluid>
@@ -70,6 +72,11 @@ const Admin = (props) => {
       </div>
     </>
   );
+};
+
+const sideBarMotion = {
+  initial: { x: 0 },
+  animate: { x: -1000 },
 };
 
 export default Admin;
