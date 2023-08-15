@@ -63,6 +63,7 @@
     "react-toastify": "^9.1.3",
     "reactstrap": "8.10.0",
     "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
     "sass": "1.62.1"
   },
   "peerDependencies": {
@@ -77,5 +78,8 @@
     "svgo": "3.0.2",
     "fsevents": "2.3.2",
     "chokidar": "3.5.3"
+  },
+  "devDependencies": {
+    "axios": "^1.4.0"
   }
 }
