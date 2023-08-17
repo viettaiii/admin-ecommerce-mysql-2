@@ -5,6 +5,8 @@ import storage from "redux-persist/lib/storage";
 import categorySlice from "features/category/categorySlice";
 import providerSlice from "features/provider/providerSlice";
 import colorSlice from "features/color/colorSlice";
+import productSlice from "features/product/productSlice";
+import createProductModalSlice from "features/product/createProductModalSlice";
 
 const persistConfig = {
   key: "root",
@@ -16,6 +18,8 @@ const rootReducer = combineReducers({
   category: categorySlice,
   provider: providerSlice,
   color: colorSlice,
+  product: productSlice,
+  createProductModal: createProductModalSlice,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const store = configureStore({
