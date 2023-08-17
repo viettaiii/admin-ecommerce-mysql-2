@@ -27,7 +27,6 @@ const AdminNavbar = (props) => {
         >
           <Container fluid>
             <span className="mr-2 ml-2 fa-2x text-white cursor-pointer">
-              <span class="mdi mdi-menu"></span>
             </span>
             <Link
               className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
